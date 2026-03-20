@@ -1,5 +1,5 @@
 import { Stack } from 'expo-router';
-import { Text,Image,StyleSheet,Pressable,View,ScrollView,FlatList,} from 'react-native';
+import { Text,Image,StyleSheet,View,ScrollView,FlatList,} from 'react-native';
 import { Link } from 'expo-router';
 
 type Course = {
@@ -57,7 +57,7 @@ function ProgressBar({ progress }: { progress: number }) {
 function CourseCard({ course }: { course: Course }) {
   return (
     <Link href={`/course/${course.id}`} asChild>
-      <Pressable style={styles.card}>
+      
         <Image source={{ uri: course.thumbnail }} style={styles.thumbnail} />
         <View style={styles.cardContent}>
           <Text style={styles.courseTitle}>{course.title}</Text>
@@ -65,7 +65,6 @@ function CourseCard({ course }: { course: Course }) {
           <ProgressBar progress={course.progress} />
           <Text style={styles.progressText}>{course.progress}% complete</Text>
         </View>
-      </Pressable>
     </Link>
   );
 }
