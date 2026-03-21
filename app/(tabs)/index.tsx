@@ -1,6 +1,6 @@
-import { Stack } from 'expo-router';
-import { Text,Image,StyleSheet,View,ScrollView,FlatList,} from 'react-native';
-import { Link } from 'expo-router';
+import { Stack } from "expo-router";
+import {Text,Image,StyleSheet,View,ScrollView,FlatList,} from "react-native";
+import { Link } from "expo-router";
 
 type Course = {
   id: string;
@@ -12,25 +12,25 @@ type Course = {
 
 const courses: Course[] = [
   {
-    id: '1',
-    title: 'Introduction to Lms',
-    instructor: 'Neuville',
+    id: "1",
+    title: "Introduction to Lms",
+    instructor: "Neuville",
     progress: 5,
-    thumbnail: 'https://picsum.photos/id/1/200/200',
+    thumbnail: "https://picsum.photos/id/1/200/200",
   },
   {
-    id: '2',
-    title: 'JavaScript Fundamentals',
-    instructor: 'Churchill',
+    id: "2",
+    title: "JavaScript Fundamentals",
+    instructor: "Churchill",
     progress: 10,
-    thumbnail: 'https://via.placeholder.com/200x200',
+    thumbnail: "https://via.placeholder.com/200x200",
   },
   {
-    id: '3',
-    title: 'UI/UX Design Basics',
-    instructor: 'Alice Johnson',
+    id: "3",
+    title: "UI/UX Design Basics",
+    instructor: "Alice Johnson",
     progress: 15,
-    thumbnail: 'https://api.dicebear.com/7.x/initials/svg?seed=JD',
+    thumbnail: "https://api.dicebear.com/7.x/initials/svg?seed=JD",
   },
 ];
 
@@ -39,7 +39,7 @@ function LogoTitle() {
     <View style={styles.headerTitle}>
       <Image
         style={styles.image}
-        source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}
+        source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
       />
       <Text style={styles.headerText}>LearnApp</Text>
     </View>
@@ -57,18 +57,16 @@ function ProgressBar({ progress }: { progress: number }) {
 function CourseCard({ course }: { course: Course }) {
   return (
     <Link href={`/course/${course.id}`} asChild>
-      
-        <Image source={{ uri: course.thumbnail }} style={styles.thumbnail} />
-        <View style={styles.cardContent}>
-          <Text style={styles.courseTitle}>{course.title}</Text>
-          <Text style={styles.instructor}>👤 {course.instructor}</Text>
-          <ProgressBar progress={course.progress} />
-          <Text style={styles.progressText}>{course.progress}% complete</Text>
-        </View>
+      <Image source={{ uri: course.thumbnail }} style={styles.thumbnail} />
+      <View style={styles.cardContent}>
+        <Text style={styles.courseTitle}>{course.title}</Text>
+        <Text style={styles.instructor}>👤 {course.instructor}</Text>
+        <ProgressBar progress={course.progress} />
+        <Text style={styles.progressText}>{course.progress}% complete</Text>
+      </View>
     </Link>
   );
 }
-
 
 export default function Home() {
   return (
@@ -76,19 +74,17 @@ export default function Home() {
       <Stack.Screen
         options={{
           headerTitle: () => <LogoTitle />,
-          headerStyle: { backgroundColor: '#4F46E5' },
-          headerTintColor: '#8888',
+          headerStyle: { backgroundColor: "#4F46E5" },
+          headerTintColor: "#8888",
         }}
       />
 
       <ScrollView style={styles.container}>
-        {/* Welcome Banner */}
         <View style={styles.banner}>
           <Text style={styles.welcomeText}>Welcome back, Student 👋</Text>
           <Text style={styles.subText}>Continue where you left off</Text>
         </View>
 
-        {/* Stats Row */}
         <View style={styles.statsRow}>
           <View style={styles.statBox}>
             <Text style={styles.statNumber}>3</Text>
@@ -104,7 +100,6 @@ export default function Home() {
           </View>
         </View>
 
-        {/* My Courses */}
         <Text style={styles.sectionTitle}>My Courses</Text>
         <FlatList
           data={courses}
@@ -120,17 +115,17 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: "#F3F4F6",
   },
   headerTitle: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 8,
   },
   headerText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   image: {
     width: 32,
@@ -138,65 +133,61 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   banner: {
-    backgroundColor: '#4F46E5',
+    backgroundColor: "#4F46E5",
     padding: 24,
     paddingBottom: 32,
   },
   welcomeText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 22,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   subText: {
-    color: '#C7D2FE',
+    color: "#C7D2FE",
     fontSize: 14,
     marginTop: 4,
   },
   statsRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    backgroundColor: '#fff',
+    flexDirection: "row",
+    justifyContent: "space-around",
+    backgroundColor: "#fff",
     marginHorizontal: 16,
     marginTop: -16,
     borderRadius: 12,
     padding: 16,
     elevation: 4,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 6,
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
   },
   statBox: {
-    alignItems: 'center',
+    alignItems: "center",
   },
   statNumber: {
     fontSize: 20,
-    fontWeight: 'bold',
-    color: '#4F46E5',
+    fontWeight: "bold",
+    color: "#4F46E5",
   },
   statLabel: {
     fontSize: 12,
-    color: '#6B7280',
+    color: "#6B7280",
     marginTop: 2,
   },
   sectionTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
-    color: '#111827',
+    fontWeight: "bold",
+    color: "#111827",
     marginHorizontal: 16,
     marginTop: 24,
     marginBottom: 12,
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     borderRadius: 12,
     marginHorizontal: 16,
     marginBottom: 12,
-    flexDirection: 'row',
-    overflow: 'hidden',
+    flexDirection: "row",
+    overflow: "hidden",
     elevation: 2,
-    shadowColor: '#000',
-    shadowOpacity: 0.08,
-    shadowRadius: 4,
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
   },
   thumbnail: {
     width: 90,
@@ -205,33 +196,33 @@ const styles = StyleSheet.create({
   cardContent: {
     flex: 1,
     padding: 12,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   courseTitle: {
     fontSize: 15,
-    fontWeight: 'bold',
-    color: '#111827',
+    fontWeight: "bold",
+    color: "#111827",
   },
   instructor: {
     fontSize: 12,
-    color: '#6B7280',
+    color: "#6B7280",
     marginTop: 2,
     marginBottom: 6,
   },
   progressContainer: {
     height: 6,
-    backgroundColor: '#E5E7EB',
+    backgroundColor: "#E5E7EB",
     borderRadius: 4,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
   progressBar: {
     height: 6,
-    backgroundColor: '#4F46E5',
+    backgroundColor: "#4F46E5",
     borderRadius: 4,
   },
   progressText: {
     fontSize: 11,
-    color: '#6B7280',
+    color: "#6B7280",
     marginTop: 4,
   },
 });
