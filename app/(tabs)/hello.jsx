@@ -4,7 +4,7 @@ import React from 'react'
 const hello = () => {
   return (
     <View>
-      <Text>hello world in react native app development in the situation of the nation suffering</Text>
+      <Text>hello world in react native </Text>
     </View>
   )
 }
