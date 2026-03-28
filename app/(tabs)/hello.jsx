@@ -8,6 +8,8 @@ const hello = () => {
       console.log('hello github')
       console.log('hello git')
       console.log('Hello logo')
+      console.log('yoh sup!')
+
     </View>
   )
 }
