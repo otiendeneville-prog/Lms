@@ -1,20 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
 
 const hello = () => {
   return (
     <View>
       <Text style={styles.text}>Hello Git!</Text>
-      console.log('hello github')
-      console.log('hello git')
-      console.log('Hello logo')
-      console.log('yoh sup!')
-
+      console.log('hello github') console.log('hello git')
     </View>
-  )
-}
+  );
+};
 
-export default hello
+export default hello;
 
-const styles = StyleSheet.create({})
-
+const styles = StyleSheet.create({});
