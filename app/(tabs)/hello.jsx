@@ -5,6 +5,9 @@ const hello = () => {
   return (
     <View>
       <Text style={styles.text}>Hello Git!</Text>
+      console.log('hello github')
+      console.log('hello git')
+      console.log('Hello logo')
     </View>
   )
 }
