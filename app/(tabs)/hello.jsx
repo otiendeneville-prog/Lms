@@ -4,7 +4,7 @@ import React from 'react'
 const hello = () => {
   return (
     <View>
-      <Text style={styles.text}>Hello Git!</Text>
+      <Text style={styles.text}>Hello Git! allow</Text>
     </View>
   )
 }
