@@ -67,13 +67,6 @@ function CourseCard({ course }: { course: Course }) {
           <Text style={styles.progressText}>{course.progress}% complete</Text>
         </View>
       </Pressable>
-          {/* <Pressable
-        style={styles.profileButton}
-        onPress={() => navigation.navigate('Profile')}
-      >
-        <Text style={styles.profileText}>Go to Profile</Text>
-      </Pressable> */}
-
     </Link>
 
   );
