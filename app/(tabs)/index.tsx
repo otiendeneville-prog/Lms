@@ -15,7 +15,7 @@ const courses: Course[] = [
   {
     id: "1",
     title: "Introduction to Lms",
-    instructor: "Neuville",
+    instructor: "Neuville",   
     progress: 5,
     thumbnail: "https://picsum.photos/id/1/200/200",
   },
@@ -67,7 +67,15 @@ function CourseCard({ course }: { course: Course }) {
           <Text style={styles.progressText}>{course.progress}% complete</Text>
         </View>
       </Pressable>
+          {/* <Pressable
+        style={styles.profileButton}
+        onPress={() => navigation.navigate('Profile')}
+      >
+        <Text style={styles.profileText}>Go to Profile</Text>
+      </Pressable> */}
+
     </Link>
+
   );
 }
 
