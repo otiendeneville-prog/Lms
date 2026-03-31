@@ -6,6 +6,7 @@ import {
   View,
   ScrollView,
   FlatList,
+  
 } from "react-native";
 import { Pressable } from "react-native";
 import { Link } from "expo-router";
@@ -40,6 +41,14 @@ const courses: Course[] = [
     progress: 15,
     thumbnail: "https://api.dicebear.com/7.x/initials/svg?seed=JD",
   },
+  {
+ id:"22",
+  title:"Python basics",
+  instructor:"Tessy",
+  progress: 20,
+  thumbnail:"https://api.dicebear.com/7.x/initials/svt?seed=JD", 
+  }
+ 
 ];
 
 function LogoTitle() {
@@ -83,11 +92,13 @@ function CourseCard({ course }: { course: Course }) {
 export default function Home() {
   return (
     <>
+    
       <Stack.Screen
         options={{
           headerTitle: () => <LogoTitle />,
           headerStyle: { backgroundColor: "#4F46E5" },
           headerTintColor: "#8888",
+          headerShown:"false",
         }}
       />
 
@@ -110,6 +121,7 @@ export default function Home() {
             <Text style={styles.statNumber}>58%</Text>
             <Text style={styles.statLabel}>Avg Progress</Text>
           </View>
+          <view style={styles.subContainer}></view>
         </View>
 
         <Text style={styles.sectionTitle}>My Courses</Text>
@@ -236,5 +248,11 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: "#6B7280",
     marginTop: 4,
+  },
+  subContainer:{
+    width:"100%",
+    backgroundColor:"#FFD700",
+    height:"20%",
+    marginTop:"50",
   },
 });
