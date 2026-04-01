@@ -9,4 +9,4 @@ const TabNavigation = () => {
   )
 }
 
-export default TabNavigation
+export default TabNavigation;
