@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { Pressable } from "react-native";
 import { Link } from "expo-router";
+import TabNavigation from "../Navigations/TabNavigation";
 
 type Course = {
   id: string;
@@ -93,7 +94,6 @@ function CourseCard({ course }: { course: Course }) {
 export default function Home() {
   return (
     <>
-    
       <Stack.Screen
         options={{
           headerTitle: () => <LogoTitle />,
@@ -137,6 +137,7 @@ export default function Home() {
           scrollEnabled={false}
         />
       </ScrollView>
+        <TabNavigation />
     </>
   );
 }
