@@ -1,12 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const TabNavigation = () => {
+
+const tab = createBottomTabNavigator();
+export default function TabNavigation() {
   return (
-    <View>
-      <Text>TabNavigation</Text>
-    </View>
+    <Tab.Navigator>
+     <Tab.Screen name ="name" component={}/>
+    </Tab.Navigator>
+  
   )
 }
-
-export default TabNavigation;
