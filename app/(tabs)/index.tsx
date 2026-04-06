@@ -121,7 +121,7 @@ export default function Home() {
             <Text style={styles.statNumber}>58%</Text>
             <Text style={styles.statLabel}>Avg Progress</Text>
           </View>
-          <view style={styles.subContainer}></view>
+          <View style={styles.subContainer}></View>
         </View>
 
         <Text style={styles.sectionTitle}>My Courses</Text>
