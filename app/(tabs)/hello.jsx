@@ -1,4 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
+import { Button } from "react-native-web";
 
 const hello = () => {
   return (
@@ -7,6 +9,9 @@ const hello = () => {
       <Text style={styles.text}>Hello Git! allow</Text>
       <Text style={styles.text}>Hello Git!</Text>
       console.log('hello github') console.log('hello git')
+      <link  href="/index.tsx" asChild/>
+      <button title="push to /index.tsx "/>
+
     </View>
   );
 };

@@ -6,6 +6,7 @@ import {
   View,
   ScrollView,
   FlatList,
+  TouchableOpacity,
   
 } from "react-native";
 import { Pressable } from "react-native";
@@ -122,6 +123,14 @@ export default function Home() {
             <Text style={styles.statLabel}>Avg Progress</Text>
           </View>
           <View style={styles.subContainer}></View>
+
+          <TouchableOpacity style={styles.button} onPress={()=> console.log("Button Clicked!")}>
+            <Text style={{textAlign:'center',
+              fontSize:'17',
+              color:'red'
+            }}>Let's Get Started</Text>
+          </TouchableOpacity>
+ logo
         </View>
 
         <Text style={styles.sectionTitle}>My Courses</Text>
@@ -249,10 +258,18 @@ const styles = StyleSheet.create({
     color: "#6B7280",
     marginTop: 4,
   },
+
   subContainer:{
     width:"100%",
     backgroundColor:"#FFD700",
     height:"20%",
-    marginTop:"50",
+    marginTop:"40",
   },
+  button:{
+   padding:15,
+   borderRadius:99,
+   marginTop:40,
+   backgroundColor:"yellow",
+   },
+
 });
