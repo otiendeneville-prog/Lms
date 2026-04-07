@@ -12,6 +12,7 @@ import {
 import { Pressable } from "react-native";
 import { Link } from "expo-router";
 
+
 type Course = {
   id: string;
   title: string;
@@ -87,7 +88,9 @@ function CourseCard({ course }: { course: Course }) {
         </View>
       </Pressable>
     </Link>
+    
   );
+  
 }
 
 export default function Home() {
@@ -122,15 +125,14 @@ export default function Home() {
             <Text style={styles.statNumber}>58%</Text>
             <Text style={styles.statLabel}>Avg Progress</Text>
           </View>
-          <View style={styles.subContainer}></View>
+          {/* <View style={styles.subContainer}></View> */}
 
           <TouchableOpacity style={styles.button} onPress={()=> console.log("Button Clicked!")}>
             <Text style={{textAlign:'center',
               fontSize:'17',
-              color:'red'
+              color:'grey',           
             }}>Let's Get Started</Text>
           </TouchableOpacity>
- logo
         </View>
 
         <Text style={styles.sectionTitle}>My Courses</Text>
@@ -259,16 +261,16 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 
-  subContainer:{
-    width:"100%",
-    backgroundColor:"#FFD700",
-    height:"20%",
-    marginTop:"40",
-  },
+  // subContainer:{
+  //   width:"100%",
+  //   backgroundColor:"#FFD700",
+  //   height:"20%",
+  //   marginTop:"40",
+  // },
   button:{
    padding:15,
    borderRadius:99,
-   marginTop:40,
+   marginTop:10,
    backgroundColor:"yellow",
    },
 

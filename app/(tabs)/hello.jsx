@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { Link } from "expo-router";
+import { Link, Stack } from "expo-router";
 import { Button } from "react-native-web";
 
 const hello = () => {
@@ -11,6 +11,7 @@ const hello = () => {
       console.log('hello github') console.log('hello git')
       <link  href="/index.tsx" asChild/>
       <button title="push to /index.tsx "/>
+        
 
     </View>
   );
